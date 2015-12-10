@@ -34,6 +34,7 @@ namespace SpeechRecognition
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            
         }
 
         /// <summary>
@@ -50,7 +51,7 @@ namespace SpeechRecognition
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-            var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("msappx:///VoiceCommands.xml"));
+            var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///VoiceCommands.xml"));
             await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(storageFile);
 
             Frame rootFrame = Window.Current.Content as Frame;
