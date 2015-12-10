@@ -36,7 +36,7 @@ namespace HelloUWP
 
         private void ScreenSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            this.Dimensions = String.Format("{0} x {1}", Window.Current.Bounds.Width, Window.Current.Bounds.Height);
+            this.Dimensions = String.Format("{0} x {1}", Window.Current.Bounds.Width.ToString(), Window.Current.Bounds.Height.ToString());
             if(PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(Dimensions)));
