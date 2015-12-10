@@ -1,0 +1,15 @@
+﻿<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="HoLCommandSet_en-us">
+    <AppName> Hands on Labs </AppName>
+    <Example> Launch </Example>
+    <Command Name="LaunchApp">
+      <Example>launch</Example>
+      <ListenFor>launch</ListenFor>
+      <Feedback>Opening your speech recognition app</Feedback>
+      <Navigate />
+    </Command>
+  </CommandSet>
+  <!-- Optional second command set for supported languages -->
+  <!-- <CommandSet xml:lang="de-de" Name="HoLCommandSet_de-de">     
+  </CommandSet> -->
+</VoiceCommands>
