@@ -60,13 +60,15 @@
             <ColumnDefinition x:Name="RightCol" />
         </Grid.ColumnDefinitions>
         <Image x:Name="Hero" Grid.Column="0" Grid.Row="0" Source="Assets/airtime.jpg"     Stretch="UniformToFill" />
-        <StackPanel x:Name="Metadata" Background="LightBlue" Padding="12">
-            <Image Source="Assets/avatar.jpg" Width="100" Height="100"             VerticalAlignment="Center"     HorizontalAlignment="Center"  />
-            <TextBlock Text="phutureproof" />
-            <TextBlock Foreground="White" FontSize="20" FontWeight="Light"             Text="Airtime" />
-            <TextBlock Text="9/15/15" />
-            <TextBlock Text="Shot at Aiguille du Midi, Chamonix, France."  TextWrapping="WrapWholeWords" />
-        </StackPanel>
+        <RelativePanel x:Name="Metadata" Background="LightBlue" Padding="12">
+            <Image Source="Assets/avatar.jpg" x:Name="Avatar" Width="100" Height="100"             VerticalAlignment="Center"     HorizontalAlignment="Center"  />
+            <TextBlock Text="phutureproof" x:Name="Username"  RelativePanel.Below="Avatar"         RelativePanel.AlignHorizontalCenterWith="Avatar" />
+            <StackPanel x:Name="Description" >
+                <TextBlock Foreground="White" FontSize="20" FontWeight="Light"             Text="Airtime" />
+                <TextBlock Text="9/15/15" />
+                <TextBlock Text="Shot at Aiguille du Midi, Chamonix, France."  TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </RelativePanel>
 
     </Grid>
 </Page>
